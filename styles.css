@@ -1,0 +1,116 @@
+/* ------------------------------
+   Global Styles
+--------------------------------*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header, footer {
+  background: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* ------------------------------
+   Flexbox Section
+--------------------------------*/
+.flex-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.flex-item {
+  flex: 1;
+  padding: 20px;
+  background: #eef6fc;
+  border: 2px solid #0077cc;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ------------------------------
+   Grid Section
+--------------------------------*/
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px;
+}
+
+.grid-item {
+  background: #eaf8ea;
+  border: 2px solid #4caf50;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ------------------------------
+   Footer
+--------------------------------*/
+.site-footer {
+  margin-top: 30px;
+}
+
+/* ------------------------------
+   Media Queries for Responsiveness
+--------------------------------*/
+
+/* Tablet breakpoint */
+@media (max-width: 900px) {
+  .flex-section {
+    flex-direction: column; /* stack flex items vertically */
+  }
+
+  .grid-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+}
